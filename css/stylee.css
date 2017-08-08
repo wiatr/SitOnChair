@@ -1,0 +1,579 @@
+/*COMMON*/
+
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url('../fonts/raleway/Raleway-Regular.ttf')  format('truetype');
+}
+@font-face {
+  font-family: 'Raleway-Bold';
+  src: url('../fonts/raleway/Raleway-Bold.ttf')  format('truetype');
+}
+@font-face {
+  font-family: 'Raleway-Black';
+  src: url('../fonts/raleway/Raleway-Black.ttf')  format('truetype');
+}
+
+body {
+  font-family: 'Raleway-Regular', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+}
+
+p {
+    color: #333;
+    font-size: 0.9rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+h1, h2, h3 {
+    font-family: "Raleway-Bold", sans-serif;
+}
+
+.butt {
+    background-color: #24BA9F;
+    border-radius: .5rem;
+    border: none;
+    padding: 0.50rem 1.5rem;
+    font-size: 1.25rem;
+}
+
+h2 {
+    color: #595959;
+}
+
+/*HEADER*/
+
+header .container {
+    background-color: black;
+    line-height: 3rem;
+    font-family: "Raleway-Bold", sans-serif;
+
+}
+
+header .col {
+    width: 50%;
+}
+
+header nav {
+    float: right;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 2rem;
+}
+
+header a {
+    color: #ccc;
+    transition: all .2s;
+}
+
+header a:hover {
+    color: #fff;
+}
+
+header .logo span {
+color: #24BA9F;
+}
+
+/*SLIDER*/
+
+.slider {
+    margin-bottom: 50px;
+}
+
+.slider .container {
+    background: linear-gradient(to bottom, #ffffff 40%,#cccccc 100%);
+    position: relative;
+    padding: 50px 3rem;
+}
+
+.slider .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.slider .slider-nav {
+    font: 2rem;
+    color: #24BA9F;
+    font-size: 3rem;
+}
+
+.slider .slider-nav:hover {
+    cursor: pointer;
+}
+
+.slider .slider-left {
+    position: absolute;
+    left: 3rem;
+    bottom: 50%;
+}
+
+.slider .slider-right {
+    position: absolute;
+    right: 3rem;
+    bottom: 50%;
+}
+
+.slider .col {
+    width: 50%;
+}
+
+/*.slider .chair {
+    background-image: url("../images/black_chair.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}*/
+
+.slider .description{
+    text-align: center;
+    padding: 0 3rem;
+}
+
+.slider h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.slider h1 span {
+    color: #24BA9F;
+}
+
+.slider p {
+    margin: 2rem 0;
+}
+
+
+/*ARTICLE*/
+
+.products .col {
+    width: calc(100% / 3 - 1rem);
+    margin: 0 1rem 1rem 0;
+    background-image: url("../images/box1_img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 225px;
+    border-radius: 1%;
+}
+
+.products .col:nth-of-type(2) {
+    background-image: url("../images/box2_img.jpg");
+}
+
+.products .col:nth-of-type(3) {
+    background-image: url("../images/box3_img.jpg");
+}
+
+.products .text-wrapper {
+    height: 225px;
+    position: relative;
+    transition: all .5s;
+
+}
+
+.products .text-wrapper:hover {
+    background: white;
+    border: 1px solid rgb(191, 191, 191);
+    height: auto;
+    min-height: 225px;
+}
+
+.products .text-wrapper:hover .header {
+    top: 1rem;
+    transition-delay: 0s;
+}
+
+.products .text-wrapper:hover p {
+    opacity: 1;
+    transition-delay: .5s;
+}
+
+.products .header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.75rem 1rem;
+    position: relative;
+    /*top: 90%; dlaczego nie dziala ??? */
+    top: 165px;
+    transition: all .5s;
+    transition-delay: .5s;
+}
+
+.products .header h3::after {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 6px;
+    background-color: #24BA9F;
+}
+
+.products p {
+    padding: 0.75rem 1rem;
+    opacity: 0;
+    transition: all .5s;
+    transition-delay: 0;
+}
+
+.prices .container {
+    background-color: #F1F1F1;
+}
+
+.prices .cennik {
+    margin: 2rem 0;
+}
+
+.prices h2::after {
+    content: "";
+    display: block;
+    /*width: 130px;*/
+    height: 6px;
+    background-color: #24BA9F;
+}
+
+/*PRICES*/
+
+.prices .col {
+    width: 33%;
+}
+
+.prices article {
+    min-height: 450px;
+    border: 2px solid #C3C3C3;
+    margin: 2rem 1rem;
+    background: #F9F9F9;
+    position: relative;
+}
+
+/*HOVER CENNIK*/
+
+.prices .col:hover article {
+    background: #27C7AB;
+    border: 2px solid #27C7AB;
+    transition: all .4s;
+}
+
+.prices .col:hover .butt {
+    background-color: #fff;
+    color: #27C7AB;
+    transition: all .4s;
+}
+.prices .col:hover .circle {
+    border: 2px solid #27C7AB;
+    transition: all .4s;
+}
+
+.prices article:hover p {
+    color: #27C7AB;
+    transition: all .4s;
+}
+
+.prices .col:hover .zew {
+    background-color: #27C7AB;
+    border: 2px solid #27C7AB;
+    transition: all .4s;
+}
+
+.prices .col:hover .wew {
+    background-color: #fff;
+    transition: all .4s;
+}
+
+
+article:hover h5 {
+    color: #fff;
+    display: block;
+    text-transform: uppercase;
+    font-family: Raleway-Regular, sans-serif;
+    font-size: 1.3rem;
+    position: relative;
+    top: 2rem;
+    left: 30px;
+}
+
+/*.prices article:hover div:nth-of-type(2n+1){
+    background-color: #F1F1F1;
+    transition: all .4s;
+}*/
+
+/*HOVER KONIEC*/
+.prices article .half {
+    padding-bottom: 3px;
+}
+
+article h5 {
+    color: #27C7AB;
+    display: block;
+    text-transform: uppercase;
+    font-family: Raleway-Regular, sans-serif;
+    font-size: 1.3rem;
+    position: relative;
+    top: 2rem;
+    left: 30px;
+}
+
+.prices .container {
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+.prices .zew {
+    height: 50px;
+    width: 50px;
+    border: 2px solid #C3C3C3;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: calc(50% - 25px);
+    top: -35px;
+    background-color: #FFFFFF;
+}
+
+.prices .wew {
+    height: 50%;
+    width: 50%;
+    background-color: #C3C3C3;
+    border-radius: 50%;
+    position: relative;
+}
+
+.prices .half p {
+    color: #27C7AB;
+    display: block;
+    text-transform: uppercase;
+    font-family: Raleway-Regular, sans-serif;
+    font-size: 1.4rem;
+    position: relative;
+    top: 2rem;
+    left: 3.3rem;
+}
+
+.prices .circle {
+    height: 100px;
+    width: 100px;
+    background-color: #FFFFFF;
+    border: 2px solid #C3C3C3;
+    border-radius: 50%;
+    position: relative;
+    margin: 3rem auto;
+}
+
+.prices .circle p {
+    color: #C1C1C1;
+}
+
+.prices .circle p:first-of-type {
+    font-family: Raleway-Black, sans-serif;
+    position: absolute;
+    display: inline-block;
+    font-size: 2rem;
+    top: 25px;
+    left: 25%;
+
+}
+.prices .circle p:nth-of-type(2n+2) {
+    font-size: .7rem;
+    font-family: Raleway-Bold, sans-serif;
+    position: relative;
+    display: inline-block;
+    top: 21px;
+    left: 64%;
+}
+
+.zeroz {
+    top: 21px;
+    left: 79% !important;
+}
+
+.prices .circle p:last-of-type {
+    font-size: .7rem;
+    font-family: Raleway-Bold, sans-serif;
+    position: relative;
+    display: inline-block;
+    top: 59px;
+    left: 7%;
+}
+
+.prices .desc div {
+    background-color: #E4E4E4;
+    line-height: 2rem;
+    color: #9A9A9A;
+    text-align: center;
+}
+
+.prices .desc div:nth-of-type(2n+2){
+    background-color: #F1F1F1;
+}
+
+.prices a {
+    font-size: .8rem;
+    position: absolute;
+    bottom: 0rem;
+    left: 4rem;
+    display: block;
+    width: 50%;
+    margin: 29px auto;
+}
+
+
+/*FORM*/
+.form .col {
+    width: 33%;
+}
+
+.form h2::after {
+    content: "";
+    display: block;
+    height: 6px;
+    background-color: #24BA9F;
+    margin-bottom: 2rem;
+}
+
+.form .col-left {
+    width: 60%;
+    float: left;
+    height-max: 350px;
+    height-min: 350px;
+
+}
+
+.form .col-right {
+    width: 40%;
+    float: left;
+    height-max: 350px;
+    height-min: 550px;
+}
+
+.form input {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border: 1px solid #C2DBD5;
+    padding-left: .6rem;
+    color: #626262;
+}
+
+.form textarea {
+    width: 100%;
+    height: 230px;
+    resize: none;
+    border: 1px solid #C2DBD5;
+    padding: .7rem 0 0 .6rem;
+    color: #626262;
+
+}
+
+.form ::-webkit-input-placeholder {
+    color: #CCCCCC !important;
+}
+
+.form input:focus, textarea:focus {
+    border: 2px solid #24BA9F;
+    outline: none;
+    color: #626262;
+}
+
+.form .center {
+    margin: 0 0 0rem 4rem;
+}
+.form input[type="checkbox"]{
+    display: none;
+}
+
+.form .check {
+    margin: 1rem 0;
+}
+
+.form .check label {
+    color: #626262;
+}
+
+.form .check label::before {
+    content: "";
+    display: inline-block;
+    width: 48px;
+    height: 40px;
+    border: 1px solid #C1DED9;
+    float: left;
+    margin-right: .4rem;
+}
+
+.form input[type="checkbox"]:checked + label::before {
+    background-image: url(../images/form_ok.jpg);
+}
+
+.form input[type="submit"] {
+    border-radius: 10px;
+    background-color: #24BA9F;
+    color: #fff;
+    font-family: "Raleway-Bold", sans-serif;
+}
+
+
+/*FOOTER*/
+footer .row {
+    margin: 4rem 0 2rem 0;
+}
+
+footer .col-left {
+    width: 60%;
+    display: inline-block;
+    float: left;
+}
+
+footer .col-right {
+    width: 40%;
+    display: inline-block;
+    float: left;
+}
+
+footer .col-left p {
+    color: #969696;
+    font-size: .8rem;
+    font-family: "Raleway-Regular", sans-serif;
+}
+
+footer .col-right img:first-of-type {
+    margin-left: 3.4rem;
+}
+
+footer .col-right img:last-of-type {
+}
+
+footer .col-right p {
+    display: inline-block;
+    float: right;
+    font-family: "Raleway-Regular", sans-serif;
+    color: #999999;
+    text-transform: uppercase;
+    padding: .6rem;
+    margin-right: -12px;
+}
+
+footer .col-right span {
+    color: #969696;
+    font-family: "Raleway-Bold";
+}
